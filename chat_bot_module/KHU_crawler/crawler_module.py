@@ -59,7 +59,7 @@ def SoftwareKHU(today1):
     if(len(newsbox)==0):
         newsbox.append("No New Issue on SW융합대학\n")
     return newsbox
-    
+'''    
 dt=datetime.datetime.now()
 today=str(dt)
 today1=today[0:10]
@@ -67,4 +67,5 @@ today2=today[0:10].replace("-",".")
 print(SWedu(today1)) # 사업단 공지사
 print(KIC(today)) #국제대학 공지사항
 print(SoftwareKHU(today))#소프트웨어 중심대학 공지사항
+'''
 
