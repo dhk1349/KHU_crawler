@@ -20,23 +20,23 @@ def keyboard():
     return jsonify({'type' : 'buttons', 'buttons':default_buttons1})
 
 @app.route('/message', methods=["post"])
-    def button1():
-        response=request.get_json()
-        user_reponse=response["content"]
+def button1():
+    response=request.get_json()
+    user_reponse=response["content"]
         
-        if(user_reponse in default_buttons1):
+    if(user_response in default_buttons1):
             bot_res={
                     'message':{"text":"Hello this First layer"},
                     "keyboard":{"buttons":default_buttons2,
                                 "type":"buttons",},
                     }
-        else if(user_response==):
+    elif(user_response in default_buttons2):
             bot_res={
                     "message":{"text":"Hello this is seconde layer"},
                     "keyboard":{"buttons":default_buttons1, 
                                 "type":"buttons",},
                     }
-        return jsonify(bot_res)
+    return jsonify(bot_res)
 
-if __name__="__main__":
+if __name__=="__main__":
     app.run(host="0.0.0.0", port=5000)
