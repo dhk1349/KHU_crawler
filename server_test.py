@@ -14,8 +14,7 @@ app=Flask(__name__)
 
 @app.route('/')
 def welcome():
-    print("Welcome to my page")
-    return
+    return "welcome"
 
 
 if __name__=="__main__":
