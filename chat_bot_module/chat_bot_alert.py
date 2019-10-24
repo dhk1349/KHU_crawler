@@ -6,7 +6,7 @@ Created on Fri Aug 30 11:58:21 2019
 """
 
 from flask import Flask, request, jsonify
-from KHU_crawler.crawler_module import *
+import KHU_crawler.crawler_module as module
 import datetime
 
 
@@ -18,7 +18,7 @@ def SWedu():
     today=str(dt)
     today1=today[0:10]
     #today2=today[0:10].replace("-",".")
-    response=SWedu(today1) # 사업단 공지사
+    response=module.SWedu(today1) # 사업단 공지사
     response=response['content']
     return jsonify(response)
 
