@@ -19,8 +19,8 @@ def SWedu():
     today1=today[0:10]
     #today2=today[0:10].replace("-",".")
     response=module.SWedu(today1) # 사업단 공지사
-    response=response['content']
-    return jsonify(response)
+    return response
+    #return jsonify(response)
 
 
 if __name__=="__main__":
