@@ -18,8 +18,8 @@ def SWedu():
     today=str(dt)
     today1=today[0:10]
     #today2=today[0:10].replace("-",".")
-    response=module.SWedu(today1) # 사업단 공지사
-    return response
+    response=module.SWedu(today1) # 사업단 공지사항
+    return response[0]
     #return jsonify(response)
 
 
