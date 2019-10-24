@@ -18,7 +18,7 @@ def SWedu(today1):
     newsbox=[]
     for i in table:
         date=i.find("td",{"class":"td_datetime"}).text.strip()
-        if(date==today):
+        if(date==today1):
             title=i.find("td", {"class":"td_subject"})
             title=title.find("div",{"class":"bo_tit"})
             title=title.find("a").text.strip() #제목
@@ -37,7 +37,7 @@ def KIC(today2):
     newsbox=[]
     for row in table:
         date=row.find("td",{"class":"kboard-list-date"}).text.strip()
-        if(date==today):
+        if(date==today2):
             title=row.find("td",{"class":"kboard-list-title"}).find("a").find("div",{"class":"kboard-default-cut-strings"}).text.strip()
             newsbox.append(title)
     if(len(newsbox)==0):
