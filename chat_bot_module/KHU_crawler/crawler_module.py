@@ -43,7 +43,7 @@ def KIC(today2):
     if(len(newsbox)==0):
         newsbox.append("No NEW Issue on KIC\n")
     return newsbox
-        
+
 def SoftwareKHU(today1):
     url="http://software.khu.ac.kr/board5/bbs/board.php?bo_table=05_01"
     html=requests.get(url).text
@@ -53,13 +53,13 @@ def SoftwareKHU(today1):
     newsbox=[]
     for row in table:
         date=row.find("td",{"class":"td_datetime"}).text.strip()
-        if(date==today):
-            title=row.find("div",{"class":"bo_tit"}).text.strip()    
+        if(date==today1):
+            title=row.find("div",{"class":"bo_tit"}).text.strip()
             newsbox.append(title)
     if(len(newsbox)==0):
         newsbox.append("No New Issue on SW융합대학\n")
     return newsbox
-'''    
+'''
 dt=datetime.datetime.now()
 today=str(dt)
 today1=today[0:10]
@@ -68,4 +68,3 @@ print(SWedu(today1)) # 사업단 공지사
 print(KIC(today)) #국제대학 공지사항
 print(SoftwareKHU(today))#소프트웨어 중심대학 공지사항
 '''
-
