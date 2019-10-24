@@ -12,7 +12,7 @@ import datetime
 
 app=Flask(__name__)
 
-@app.route('/SWedu', methods=["post"])
+@app.route('/swedu')
 def SWedu():
     dt=datetime.datetime.now()
     today=str(dt)
@@ -24,4 +24,4 @@ def SWedu():
 
 
 if __name__=="__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0", port=80)
