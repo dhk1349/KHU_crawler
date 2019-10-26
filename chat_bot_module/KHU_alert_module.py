@@ -5,7 +5,7 @@ Created on Fri Aug 30 11:58:21 2019
 @author: dhk13
 """
 
-from flask import Flask, request, jsonify, g
+from flask import Flask, request, jsonify, g, render_template
 import KHU_crawler.crawler_module as module
 import datetime
 
@@ -17,8 +17,8 @@ today1=today[0:10]
 today2=today[0:10].replace("-",".")
 
 @app.route('/')
-def alert():
-	return
+def index_page():
+	return render_template("index.html")
 
 @app.route('/swedu')
 def SWedu():
