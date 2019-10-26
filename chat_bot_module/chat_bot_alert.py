@@ -22,23 +22,18 @@ def alert():
 
 @app.route('/swedu')
 def SWedu():
-    #dt=datetime.datetime.now()
-    #today=str(dt)
-    #today1=today[0:10]
-    #today2=today[0:10].replace("-",".")
     response={'content':module.SWedu(today1)} # 사업단 공지사항
-    return response
-    #return jsonify(response)
+    return jsonify(response)
 
 @app.route('/kic')
 def kic():
-	response=module.KIC(today2)
-	return response[0]
+	response={'content':module.KIC(today2)}
+	return jsonify(response)
 
 @app.route('/softkhu')
 def Softkhu():
-	response=module.SoftwareKHU(today1)
-	return reponse[0]
+	response={'content':module.SoftwareKHU(today1)}
+	return response
 
 if __name__=="__main__":
     app.run(host="0.0.0.0", port=80)
