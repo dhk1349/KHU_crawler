@@ -24,7 +24,7 @@ def index_page():
 @app.route('/swedu')
 def SWedu():
     response={'content':module.SWedu(today1)} # 사업단 공지사항
-	response=json.dumps(response, ensure_ascii=False).encode('utf8')
+	#response=json.dumps(response, ensure_ascii=False).encode('utf8')
 	return response
 
 @app.route('/kic')
