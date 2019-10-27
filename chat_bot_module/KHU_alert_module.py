@@ -23,7 +23,7 @@ def index_page():
 @app.route('/swedu')
 def SWedu():
     response={'content':module.SWedu(today1)} # 사업단 공지사항
-    return jsonify(response)
+    return response
 
 @app.route('/kic')
 def kic():
