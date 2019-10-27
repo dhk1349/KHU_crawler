@@ -36,7 +36,8 @@ def kic():
 @app.route('/softkhu')
 def Softkhu():
 	response={'content':module.SoftwareKHU(today1)}
+	response=json.dumps(response, ensure_ascii=False).encode('utf8')
 	return response
 
 if __name__=="__main__":
-    app.run(host="0.0.0.0", port=80)
+    app.run(host="0.0.0.0", port=80, debug=True)
