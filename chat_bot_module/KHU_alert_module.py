@@ -8,6 +8,7 @@ Created on Fri Aug 30 11:58:21 2019
 from flask import Flask, request, jsonify, g, render_template
 import KHU_crawler.crawler_module as module
 import datetime
+import json
 
 
 app=Flask(__name__)
@@ -23,7 +24,8 @@ def index_page():
 @app.route('/swedu')
 def SWedu():
     response={'content':module.SWedu(today1)} # 사업단 공지사항
-    return response
+	response=json.dumps(response, ensure_ascii=False).encode('utf8')
+	return response
 
 @app.route('/kic')
 def kic():
