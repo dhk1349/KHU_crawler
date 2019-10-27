@@ -27,9 +27,8 @@ def SWedu():
 
 @app.route('/kic')
 def kic():
-	response=jsonify({'content':module.KIC(today2)})
-	indata=response['content']
-	return render_template("kic.html", inlist=indata)
+	response={'content':module.KIC(today2)}
+	return jsonify(response)
 
 @app.route('/softkhu')
 def Softkhu():
