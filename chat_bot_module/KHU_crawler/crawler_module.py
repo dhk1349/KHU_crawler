@@ -25,7 +25,20 @@ def SWedu(today1):
             newsbox.append(title)
     if(len(newsbox)==0):
         newsbox.append("No New Issue on SW중심사업단\n")
-    return newsbox
+    temp_response={
+    "version": "2.0",
+    "template": {
+        "outputs": [
+            {
+                "simpleText": {
+                    "text": "간단한 텍스트 요소입니다."
+                }
+            }
+        ]
+    }
+}
+    #return newsbox
+    return temp_response
 
 def KIC(today2):
     url="http://kic.khu.ac.kr/notice/undergraduate/"
